@@ -1,7 +1,100 @@
 
 $(document).ready(function() {
-    var mysteryGang = ["scooby", "shaggy", "velma", "daphne", "fred"];
-    var villian = ["knight", "phantom", "cutler", "miner", "witchDoctor" ];
+    // var mysteryGang = ["scooby", "shaggy", "velma", "daphne", "fred"];
+    // var villian = ["knight", "phantom", "cutler", "miner", "witchDoctor" ];
+
+    var mysteryGang = {
+        'scooby': {
+            name: 'scoobyDoo',
+            health: 170,
+            // clues are attack power
+            clues: 20,
+            // ? are counter attack power
+            counterAttackPower: 15,
+            
+        },
+
+        'shaggy': {
+            name: 'shaggyRogers',
+            health: 160,
+            clues: 6,
+            counterAttackPower: 15,
+            
+        },
+
+        'velma': {
+            name: 'velmaDinkley',
+            health: 150,
+            clues: 3,
+            counterAttackPower: 12,
+            
+        },
+
+        'daphne': {
+            name: 'daphneBlake',
+            health: 150,
+            clues: 3,
+            counterAttackPower: 12,
+            
+        },
+
+        'fred': {
+            name: 'fredJones',
+            health: 150,
+            clues: 3, 
+            counterAttackPower: 12,
+            
+        }
+
+
+    }
+
+    var villian = {
+        'knight': {
+            name: "blackKnight",
+            health: 140,
+            // scares are the counter attack power
+            scares: 4,
+            
+             
+        },
+
+        'phantom': {
+            name: "thePhantom",
+            health: 140,
+            // scares are the counter attack power
+            scares: 2,
+            
+             
+        },
+
+        'cutler': {
+            name: "captianCutler",
+            health: 140,
+            // scares are the counter attack power
+            scares: 3,
+            
+             
+        },
+
+        'miner': {
+            name: "miner49er",
+            health: 140,
+            // scares are the counter attack power
+            scares: 3,
+            
+             
+        },
+
+        'witchDoctor': {
+            name: "IndianWitchDoctor",
+            health: 140,
+            // scares are the counter attack power
+            scares: 4,
+            
+             
+        }
+    }
 
     $("#scooby").click(function() {
             $("#scooby").appendTo("#yourMember");
