@@ -1,48 +1,98 @@
+var scoobySnacks;
+var clues;
+var scares;
+var mysteryGangMembers;
+var villianMembers;
+var mysteryGangMembersClues;
+var villianMembersScares;
+var mysteryGangMembersSS
+var villianMembersSS;
+var yourMysteryGangMember= "";
+var villianToUnmask= "";
+
+function reset() {
+    $(".restart").hide();
+    $("#machine").show();
+
+    var yourMysteryGangMember="";
+    var villianToUnmask="";
+
+    mysteryGang.scooby.scoobySnacks = 170;
+    mysteryGang.shaggy.scoobySnacks = 160;
+    mysteryGang.velma.scoobySnacks = 150;
+    mysteryGang.daphne.scoobySnacks = 150;
+    mysteryGang.fred.scoobySnacks = 150;
+    villian.knight.scoobySnacks = 150;
+    villian.phantom.scoobySnacks = 150;
+    villian.cutler.scoobySnacks = 150;
+    villian.miner.scoobySnacks = 150;
+    villian.witchDoctor.scoobySnacks = 150;
+
+    mysteryGang.scooby.clues = 170;
+    mysteryGang.shaggy.clues = 160;
+    mysteryGang.velma.clues = 150;
+    mysteryGang.daphne.clues = 150;
+    mysteryGang.fred.clues = 150;
+
+    villian.knight.scares = 150;
+    villian.phantom.scares = 150;
+    villian.cutler.scares = 150;
+    villian.miner.scares = 150;
+    villian.witchDoctor.scares = 150;
+
+}
+
+
+
 
 $(document).ready(function() {
-    // var mysteryGang = ["scooby", "shaggy", "velma", "daphne", "fred"];
-    // var villian = ["knight", "phantom", "cutler", "miner", "witchDoctor" ];
+    reset();
+ 
 
     var mysteryGang = {
         'scooby': {
             name: 'scoobyDoo',
-            health: 170,
+            // scoobySnacks are the health points of each character
+            scoobySnacks: 170,
             // clues are attack power
-            clues: 20,
-            // ? are counter attack power
-            counterAttackPower: 15,
+            clues: 6,
+            // scoobySnacksUpdate: function(scareDamage) {
+            //     this.scoobySnacks -= scareDamage;
+            //     $("#scooby").text(this.health);
+            // }
+           
             
         },
 
         'shaggy': {
             name: 'shaggyRogers',
-            health: 160,
+            scoobySnacks: 160,
             clues: 6,
-            counterAttackPower: 15,
+            
             
         },
 
         'velma': {
             name: 'velmaDinkley',
-            health: 150,
+            scoobySnacks: 150,
             clues: 3,
-            counterAttackPower: 12,
+          
             
         },
 
         'daphne': {
             name: 'daphneBlake',
-            health: 150,
+            scoobySnacks: 150,
             clues: 3,
-            counterAttackPower: 12,
+            
             
         },
 
         'fred': {
             name: 'fredJones',
-            health: 150,
+            scoobySnacks: 150,
             clues: 3, 
-            counterAttackPower: 12,
+            
             
         }
 
@@ -52,7 +102,8 @@ $(document).ready(function() {
     var villian = {
         'knight': {
             name: "blackKnight",
-            health: 140,
+            // scooby snacks are the health points
+            scoobySnacks: 150,
             // scares are the counter attack power
             scares: 4,
             
@@ -61,7 +112,7 @@ $(document).ready(function() {
 
         'phantom': {
             name: "thePhantom",
-            health: 140,
+            scoobySnacks: 150,
             // scares are the counter attack power
             scares: 2,
             
@@ -70,7 +121,7 @@ $(document).ready(function() {
 
         'cutler': {
             name: "captianCutler",
-            health: 140,
+            scoobySnacks: 150,
             // scares are the counter attack power
             scares: 3,
             
@@ -79,7 +130,7 @@ $(document).ready(function() {
 
         'miner': {
             name: "miner49er",
-            health: 140,
+            scoobySnacks: 150,
             // scares are the counter attack power
             scares: 3,
             
@@ -88,7 +139,7 @@ $(document).ready(function() {
 
         'witchDoctor': {
             name: "IndianWitchDoctor",
-            health: 140,
+            scoobySnacks: 150,
             // scares are the counter attack power
             scares: 4,
             
@@ -97,7 +148,8 @@ $(document).ready(function() {
     }
 
     $("#scooby").click(function() {
-            $("#scooby").appendTo("#yourMember");
+        $("#scoobyScoobySnacks").appendTo("#yourMember")
+        $("#scooby").appendTo("#yourMember");
         var mysteryGang = false;
         if($('#scooby').val().length == 0 ) {
         $("#scooby").css("border","1px solid green");
@@ -110,6 +162,7 @@ $(document).ready(function() {
     });
 
     $("#shaggy").click(function() {
+        $("#shaggyScoobySnacks").appendTo("#yourMember")
         $("#shaggy").appendTo("#yourMember");
         if($('#shaggy').val().length == 0 ) {
             $("#shaggy").css("border","1px solid green");
@@ -121,6 +174,7 @@ $(document).ready(function() {
     });
 
     $("#velma").click(function() {
+        $("#velmaScoobySnacks").appendTo("#yourMember")
         $("#velma").appendTo("#yourMember");
         if($('#velma').val().length == 0 ) {
             $("#velma").css("border","1px solid green");
@@ -132,6 +186,7 @@ $(document).ready(function() {
     });
 
     $("#daphne").click(function() {
+        $("#daphneScoobySnacks").appendTo("#yourMember")
         $("#daphne").appendTo("#yourMember");
         if($('#daphne').val().length == 0 ) {
             $("#daphne").css("border","1px solid green");
@@ -143,6 +198,7 @@ $(document).ready(function() {
     });
 
     $("#fred").click(function() {
+        $("#fredScoobySnacks").appendTo("#yourMember")
         $("#fred").appendTo("#yourMember");
         if($('#fred').val().length == 0 ) {
             $("#fred").css("border","1px solid green");
@@ -187,6 +243,7 @@ $(document).ready(function() {
     });
 
     $("#miner").click(function() {
+        $("#minerScoobySnacks").appendTo("#unmask");
         $("#miner").appendTo("#unmask");
         if($('#miner').val().length == 0 ) {
             $("#miner").css("border","1px solid red");
@@ -206,15 +263,9 @@ $(document).ready(function() {
 
     });
 
+    $("#machine").on("click",function () {
+        
+    });
+
     
-
-    // // var characters = {
-    //     'scoobyDoo': {
-    //         name: Scooby,
-    //         health: 150,
-    //         attack: 20,
-    //         enemyAttack: 15,
-
-    //     }
-    // };
 });
