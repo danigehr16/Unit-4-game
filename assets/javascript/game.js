@@ -12,8 +12,8 @@ var myCharacter;
 var villianCharacter;
 
 function reset() {
-    $(".restart").hide();
-    $("#machine").show();
+    $("#Reset").hide();
+    $("#solve").show();
 
     var yourMysteryGangMember="";
     var villianToUnmask="";
@@ -126,7 +126,6 @@ $(document).ready(function() {
         myCharacter = mysteryGang.scooby;
         $("#scoobyScoobySnacks").appendTo("#scoobySnacksRemaining")
         $("#scooby").appendTo("#memberimage");
-        // var mysteryGang = false;
         if($('#scooby').val().length == 0 ) {
         $("#scooby").css("border","1px solid green");
         return false;
@@ -139,8 +138,8 @@ $(document).ready(function() {
 
     $("#shaggy").click(function() {
         myCharacter = mysteryGang.shaggy;
-        $("#shaggyScoobySnacks").appendTo("#yourMember")
-        $("#shaggy").appendTo("#yourMember");
+        $("#shaggyScoobySnacks").appendTo("#scoobySnacksRemaining")
+        $("#shaggy").appendTo("#memberimage");
         if($('#shaggy').val().length == 0 ) {
             $("#shaggy").css("border","1px solid green");
             return false;
@@ -152,8 +151,8 @@ $(document).ready(function() {
 
     $("#velma").click(function() {
         myCharacter = mysteryGang.velma;
-        $("#velmaScoobySnacks").appendTo("#yourMember")
-        $("#velma").appendTo("#yourMember");
+        $("#velmaScoobySnacks").appendTo("#scoobySnacksRemaining")
+        $("#velma").appendTo("#memberimage");
         if($('#velma').val().length == 0 ) {
             $("#velma").css("border","1px solid green");
             return false;
@@ -165,8 +164,8 @@ $(document).ready(function() {
 
     $("#daphne").click(function() {
         myCharacter = mysteryGang.daphne;
-        $("#daphneScoobySnacks").appendTo("#yourMember")
-        $("#daphne").appendTo("#yourMember");
+        $("#daphneScoobySnacks").appendTo("#scoobySnacksRemaining")
+        $("#daphne").appendTo("#memberimage");
         if($('#daphne').val().length == 0 ) {
             $("#daphne").css("border","1px solid green");
             return false;
@@ -178,8 +177,8 @@ $(document).ready(function() {
 
     $("#fred").click(function() {
         myCharacter = mysteryGang.fred;
-        $("#fredScoobySnacks").appendTo("#yourMember")
-        $("#fred").appendTo("#yourMember");
+        $("#fredScoobySnacks").appendTo("#scoobySnacksRemaining")
+        $("#fred").appendTo("#memberimage");
         if($('#fred').val().length == 0 ) {
             $("#fred").css("border","1px solid green");
             return false;
@@ -205,8 +204,8 @@ $(document).ready(function() {
 
     $("#phantom").click(function() {
         villianCharacter = villian.phantom;
-        $("#phantomScoobySnacks").appendTo("#unmask");
-        $("#phantom").appendTo("#unmask");
+        $("#phantomScoobySnacks").appendTo("#VillianScoobySnacksRemaining");
+        $("#phantom").appendTo("#villianImage");
         if($('#phantom').val().length == 0 ) {
             $("#phantom").css("border","1px solid red");
             return false;
@@ -218,8 +217,8 @@ $(document).ready(function() {
 
     $("#cutler").click(function() {
         villianCharacter = villian.cutler;
-        $("#cutlerScoobySnacks").appendTo("#unmask");
-        $("#cutler").appendTo("#unmask");
+        $("#cutlerScoobySnacks").appendTo("#VillianScoobySnacksRemaining");
+        $("#cutler").appendTo("#villianImage");
         if($('#cutler').val().length == 0 ) {
             $("#cutler").css("border","1px solid red");
             return false;
@@ -230,8 +229,8 @@ $(document).ready(function() {
 
     $("#miner").click(function() {
         villianCharacter = villian.miner;
-        $("#minerScoobySnacks").appendTo("#unmask");
-        $("#miner").appendTo("#unmask");
+        $("#minerScoobySnacks").appendTo("#VillianScoobySnacksRemaining");
+        $("#miner").appendTo("#villianImage");
         if($('#miner').val().length == 0 ) {
             $("#miner").css("border","1px solid red");
             return false;
@@ -242,8 +241,8 @@ $(document).ready(function() {
 
     $("#witchDoctor").click(function() {
         villianCharacter = villian.witchDoctor;
-        $("#witchDoctorScoobySnacks").appendTo("#unmask");
-        $("#witchDoctor").appendTo("#unmask");
+        $("#witchDoctorScoobySnacks").appendTo("#VillianScoobySnacksRemaining");
+        $("#witchDoctor").appendTo("#villianImage");
         if($('#witchDoctor').val().length == 0 ) {
             $("#witchDoctor").css("border","1px solid red");
             return false;
@@ -255,22 +254,12 @@ $(document).ready(function() {
     
 
     $("#solve").click (function() {
+        
         myCharacter.scoobySnacks = myCharacter.scoobySnacks - villianCharacter.scares;
         $("#scoobySnacksRemaining").text(myCharacter.scoobySnacks);
 
-        villian.ScoobySnacks = villian.ScoobySnacks - yourCharacter.clues;
-        $("#villianCharacter.scoobySnacks").html(scoobySnacks);
-        
-    // if (myCharacter == mysteryGang.scooby.name) {
-    //     myCharacter.ScoobySnacks = mysteryGang.scooby.scoobySnacks;
-    //     myCharacter.clues = mysteryGang.scooby.clues;
-    // };
-
-    // if (villianCharacter == villian.knight.name) {
-    //     villian.ScoobySnacks = villian.knight.scoobySnacks;
-    //     villianCharacter.scares = villian.knight.scares;
-    // }; 
-        
+        villianCharacter.scoobySnacks = villianCharacter.scoobySnacks - myCharacter.clues;
+        $("#VillianScoobySnacksRemaining").text(villianCharacter.scoobySnacks);
     });
 
 
