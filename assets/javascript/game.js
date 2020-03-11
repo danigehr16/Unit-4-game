@@ -127,7 +127,7 @@ $(document).ready(function() {
         $("#scoobyScoobySnacks").appendTo("#scoobySnacksRemaining")
         $("#scooby").appendTo("#memberimage");
         if($('#scooby').val().length == 0 ) {
-        $("#scooby").css("border","1px solid green");
+        $("#scooby").css("border","2px solid green");
         return false;
         };
             
@@ -141,7 +141,7 @@ $(document).ready(function() {
         $("#shaggyScoobySnacks").appendTo("#scoobySnacksRemaining")
         $("#shaggy").appendTo("#memberimage");
         if($('#shaggy').val().length == 0 ) {
-            $("#shaggy").css("border","1px solid green");
+            $("#shaggy").css("border","2px solid green");
             return false;
             };
             
@@ -154,7 +154,7 @@ $(document).ready(function() {
         $("#velmaScoobySnacks").appendTo("#scoobySnacksRemaining")
         $("#velma").appendTo("#memberimage");
         if($('#velma').val().length == 0 ) {
-            $("#velma").css("border","1px solid green");
+            $("#velma").css("border","2px solid green");
             return false;
             };
             
@@ -167,7 +167,7 @@ $(document).ready(function() {
         $("#daphneScoobySnacks").appendTo("#scoobySnacksRemaining")
         $("#daphne").appendTo("#memberimage");
         if($('#daphne').val().length == 0 ) {
-            $("#daphne").css("border","1px solid green");
+            $("#daphne").css("border","2px solid green");
             return false;
             };
             
@@ -180,7 +180,7 @@ $(document).ready(function() {
         $("#fredScoobySnacks").appendTo("#scoobySnacksRemaining")
         $("#fred").appendTo("#memberimage");
         if($('#fred').val().length == 0 ) {
-            $("#fred").css("border","1px solid green");
+            $("#fred").css("border","2px solid green");
             return false;
             };
             
@@ -194,7 +194,7 @@ $(document).ready(function() {
         $("#knightScoobySnacks").appendTo("#VillianScoobySnacksRemaining");
         $("#knight").appendTo("#villianImage");
         if($('#knight').val().length == 0 ) {
-            $("#knight").css("border","1px solid red");
+            $("#knight").css("border","2px solid red");
             return false;
             };
            
@@ -207,7 +207,7 @@ $(document).ready(function() {
         $("#phantomScoobySnacks").appendTo("#VillianScoobySnacksRemaining");
         $("#phantom").appendTo("#villianImage");
         if($('#phantom').val().length == 0 ) {
-            $("#phantom").css("border","1px solid red");
+            $("#phantom").css("border","2px solid red");
             return false;
             };
             
@@ -220,7 +220,7 @@ $(document).ready(function() {
         $("#cutlerScoobySnacks").appendTo("#VillianScoobySnacksRemaining");
         $("#cutler").appendTo("#villianImage");
         if($('#cutler').val().length == 0 ) {
-            $("#cutler").css("border","1px solid red");
+            $("#cutler").css("border","2px solid red");
             return false;
             };
         console.log("captian cutler")
@@ -232,7 +232,7 @@ $(document).ready(function() {
         $("#minerScoobySnacks").appendTo("#VillianScoobySnacksRemaining");
         $("#miner").appendTo("#villianImage");
         if($('#miner').val().length == 0 ) {
-            $("#miner").css("border","1px solid red");
+            $("#miner").css("border","2px solid red");
             return false;
             };
         console.log("Miner49er")
@@ -244,7 +244,7 @@ $(document).ready(function() {
         $("#witchDoctorScoobySnacks").appendTo("#VillianScoobySnacksRemaining");
         $("#witchDoctor").appendTo("#villianImage");
         if($('#witchDoctor').val().length == 0 ) {
-            $("#witchDoctor").css("border","1px solid red");
+            $("#witchDoctor").css("border","2px solid red");
             return false;
             };
         console.log("Indian Witch Doctor")
@@ -256,20 +256,16 @@ $(document).ready(function() {
     $("#solve").click (function() {
         
         myCharacter.scoobySnacks = myCharacter.scoobySnacks - villianCharacter.scares;
-        $("#scoobySnacksRemaining").text(myCharacter.scoobySnacks);
-            let clues = 1
-        console.log()
+        $("#scoobySnacksRemaining").text(myCharacter.scoobySnacks)
+
+         
 
         villianCharacter.scoobySnacks = villianCharacter.scoobySnacks - myCharacter.clues;
         $("#VillianScoobySnacksRemaining").html(villianCharacter.scoobySnacks);
-
-        // var clues = parseInt($("#hiddenVal").val());
-        //         counter++;
-        //         $("#hiddenVal").val(counter);
-        //         $("#theCount").text(counter);
-
-        // if (myCharacter.scoobySnacks =)
     });
+
+    // I could not get the pictures to disappear
+    // i also could not get the numbers of wins and losses to increase i know you have to use if else statements and then ++ but i just couldnt get the code right.
 
 
 
