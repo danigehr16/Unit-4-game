@@ -257,9 +257,18 @@ $(document).ready(function() {
         
         myCharacter.scoobySnacks = myCharacter.scoobySnacks - villianCharacter.scares;
         $("#scoobySnacksRemaining").text(myCharacter.scoobySnacks);
+            let clues = 1
+        console.log()
 
         villianCharacter.scoobySnacks = villianCharacter.scoobySnacks - myCharacter.clues;
-        $("#VillianScoobySnacksRemaining").text(villianCharacter.scoobySnacks);
+        $("#VillianScoobySnacksRemaining").html(villianCharacter.scoobySnacks);
+
+        // var clues = parseInt($("#hiddenVal").val());
+        //         counter++;
+        //         $("#hiddenVal").val(counter);
+        //         $("#theCount").text(counter);
+
+        // if (myCharacter.scoobySnacks =)
     });
 
 

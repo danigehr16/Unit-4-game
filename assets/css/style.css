@@ -1,0 +1,145 @@
+
+#scooby {
+    position: relative;
+    z-index: 0;
+    float: left;
+    margin: 5px;
+}
+
+#shaggy {
+    position: relative;
+    z-index: 0;
+    float: left;
+    margin: 5px;
+}
+
+#velma {
+    position: relative;
+    z-index: 0;
+    float: left;
+    margin: 5px;
+    background-color: white;
+}
+
+#daphne {
+    position: relative;
+    z-index: 0;
+    float: left;
+    margin: 5px;
+}
+
+#fred {
+    position: relative;
+    z-index: 0;
+    float: left;
+    margin: 5px;
+}
+
+#knight {
+    position: relative;
+    z-index: 0;
+    float: left;
+    margin: 5px;
+}
+
+#phantom {
+    position: relative;
+    z-index: 0;
+    float: left;
+    margin: 5px;
+    background-color: white;
+}
+
+#cutler {
+    position: relative;
+    z-index: 0;
+    float: left;
+    margin: 5px;
+    background-color: white;
+}
+
+#miner {
+    position: relative;
+    z-index: 0;
+    float: left;
+    margin: 5px;
+    
+}
+
+#witchDoctor {
+    position: relative;
+    z-index: 0;
+    float: left;
+    margin: 5px;
+    background-color: white;
+}
+
+#scoobyScoobySnacks {
+    position: relative;
+    z-index: 1;
+    float: left;
+    padding-left: 0%;
+}
+
+#shaggyScoobySnacks {
+    position: relative;
+    z-index: 1;
+    float: left;
+   
+}
+
+#velmaScoobySnacks {
+    position: relative;
+    z-index: 1;
+    float: left;
+    
+}
+
+#daphneScoobySnacks {
+    position: relative;
+    z-index: 1;
+    float: left;
+    
+}
+
+#fredScoobySnacks {
+    position: relative;
+    z-index: 1;
+    float: left;
+    
+}
+
+#knightScoobySnacks {
+    position: relative;
+    z-index: 0;
+    float: left;
+    
+}
+
+#phantomScoobySnacks {
+    position: relative;
+    z-index: 0;
+    float: left;
+    
+}
+
+#cutlerScoobySnacks {
+    position: relative;
+    z-index: 0;
+    float: left;
+    
+}
+
+#minerScoobySnacks {
+    position: relative;
+    z-index: 0;
+    float: left;
+    
+}
+
+#witchDoctorScoobySnacks {
+    position: relative;
+    z-index: 0;
+    float: left;
+    
+}
